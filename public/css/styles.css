@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    display: flex;
+    margin: 20px;
+}
+
+.bio {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.gallery {
+    flex: 2;
+}
+footer {
+    background-color: #333; /* Un color oscuro para el fondo del footer */
+    color: #fff; /* Texto claro para contraste */
+    padding: 20px 0; /* Añade algo de relleno */
+    text-align: center; /* Centra el contenido */
+}
+
+.footer-content p, .social-links a {
+    margin: 10px 0; /* Espaciado vertical para elementos dentro del footer */
+}
+
+.social-links a {
+    display: inline-block; /* Muestra los enlaces de redes sociales en línea */
+    margin: 0 10px; /* Espaciado horizontal entre íconos */
+}
+
+.social-links img {
+    width: 30px; /* Tamaño uniforme para los íconos de redes sociales */
+    height: auto; /* Mantiene la proporción de los íconos */
+}
+.logo img {
+    height: 60px; /* Ajusta según el tamaño de tu logo */
+    margin: 10px; /* Espacio alrededor del logo */
+}
+.navbar {
+    list-style-type: none; /* Remueve los estilos predeterminados de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    justify-content: flex-end; /* Ajusta esta propiedad para alinear como prefieras */
+}
+
+.navbar li {
+    padding: 20px; /* Espaciado alrededor de cada elemento de la lista */
+}
+
+.navbar a {
+    text-decoration: none; /* Remueve el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambia la disposición de los elementos a vertical */
+    }
+
+    .navbar li {
+        text-align: center; /* Centra el texto en dispositivos móviles */
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+:root {
+    --primary-color: #007bff; /* Por ejemplo, un tono de azul */
+    --text-color: #333;
+}
+
+#bio, #gallery {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+#bio h2, #gallery h2 {
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6; /* Aumenta la legibilidad del texto */
+}
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crea una cuadrícula responsiva */
+    gap: 1rem;
+}
+
+.art-thumbnail {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border: 3px solid var(--primary-color); /* Añade un borde sutil a las imágenes */
+}
+.container {
+    width: 80%; /* Usa un porcentaje del ancho de la ventana/viewport */
+    max-width: 1200px; /* Un máximo para no extenderse demasiado en pantallas grandes */
+    margin: auto; /* Centra el contenedor */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
