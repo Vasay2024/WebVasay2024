@@ -1,4 +1,4 @@
-// Este script abre la imagen de la miniatura en una nueva pestaña al hacer clic en ella
+/* Este script abre la imagen de la miniatura en una nueva pestaña al hacer clic en ella
 
 document.addEventListener('DOMContentLoaded', function() {
     // Selecciona todas las miniaturas de la galería
@@ -15,4 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(imageUrl, '_blank');
         });
     });
-});
+});*/

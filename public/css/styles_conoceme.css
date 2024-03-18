@@ -35,18 +35,7 @@ main {
     margin: 20px;
 }
 
-.bio {
-    flex: 1;
-    padding-right: 20px;
-}
-.bio2 {
-    flex: 1;
-    padding-right: 20px;
-}
 
-.gallery {
-    flex: 2;
-}
 /* Estilos para el footer */
 footer {
     background: linear-gradient(to bottom, #ffffff, #800080); /* Fondo degradado de blanco a morado */
@@ -110,15 +99,6 @@ footer {
 :root {
     --primary-color: #007bff; /* Por ejemplo, un tono de azul */
     --text-color: #333;
-}
-
-#bio, #gallery {
-    color: var(--text-color);
-    margin-bottom: 2rem;
-}
-
-#bio h2, #gallery h2 {
-    color: var(--primary-color);
 }
 
 p {

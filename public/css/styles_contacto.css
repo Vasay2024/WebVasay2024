@@ -35,18 +35,7 @@ main {
     margin: 20px;
 }
 
-.bio {
-    flex: 1;
-    padding-right: 20px;
-}
-.bio2 {
-    flex: 1;
-    padding-right: 20px;
-}
 
-.gallery {
-    flex: 2;
-}
 /* Estilos para el footer */
 footer {
     background: linear-gradient(to bottom, #ffffff, #800080); /* Fondo degradado de blanco a morado */
@@ -112,15 +101,6 @@ footer {
     --text-color: #333;
 }
 
-#bio, #gallery {
-    color: var(--text-color);
-    margin-bottom: 2rem;
-}
-
-#bio h2, #gallery h2 {
-    color: var(--primary-color);
-}
-
 p {
     line-height: 1.6; /* Aumenta la legibilidad del texto */
 }
@@ -133,4 +113,12 @@ p {
 img {
     max-width: 100%;
     height: auto;
+}
+.whatsapp-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 100px 0 200px 450px; /* Espacio alrededor del logo: arriba, derecha, abajo, izquierda */
+}
+
+.whatsapp-container img {
+    max-width: 500px; /* Ajusta el tamaño máximo de la imagen según tus preferencias */
 }
