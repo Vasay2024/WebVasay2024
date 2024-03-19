@@ -9,6 +9,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 img {
@@ -47,7 +50,7 @@ img {
     transition: color 0.3s;
 }
 
-.main-navigation a:hover {
+.main-navigation a:hover, .main-navigation .active {
     color: #ff69b4;
 }
 
@@ -60,8 +63,19 @@ img {
     cursor: pointer;
 }
 
-/* Secciones Principales */
+/* Contenido Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.image-container {
+    max-width: 600px; /* Ajusta esto según el tamaño preferido */
+    margin: 20px;
+    text-align: center;
+}
 
 /* Pie de página */
 .site-footer {
@@ -80,11 +94,11 @@ img {
     display: inline-block;
     margin: 0 15px;
 }
-.social-links img {
-    width: 25px; /* O el tamaño que prefieras */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
 
+.social-links img {
+    width: 25px;
+    height: auto;
+}
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -99,10 +113,6 @@ img {
 
     .menu-toggle {
         display: inline-block;
-    }
-
-    .intro-section img, .gallery-section img {
-        width: 90%;
     }
 }
 
@@ -120,10 +130,3 @@ img {
         margin-bottom: 10px;
     }
 }
-.site-logo {
-    max-width: 200px; /* Máximo ancho de 800px */
-    max-height: 200px; /* Máximo alto de 800px */
-    width: 100%; /* Esto hace que la imagen sea responsiva */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-

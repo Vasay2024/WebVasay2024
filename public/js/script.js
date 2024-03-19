@@ -8,3 +8,4 @@ document.addEventListener('DOMContentLoaded', function() {
         primaryMenu.style.display = isExpanded ? 'none' : 'block';
     });
 });
+ 
