@@ -1,3 +1,4 @@
+/* Estilos Base */
 * {
     margin: 0;
     padding: 0;
@@ -6,111 +7,123 @@
 
 body {
     font-family: Arial, sans-serif;
-}
-header {
-    background-color: white;
-    color: #800080;
-    padding: 10px 20px;
+    line-height: 1.5;
+    color: #333;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: #800080; /* Cambia el color del texto del menú a morado */
-    text-decoration: none;
-    transition: color 0.3s ease; /* Agrega transición suave al color */
-}
-header nav ul li a:hover {
-    color: #ff69b4; /* Destaca el color al posicionar el mouse */
-}
-main {
-    display: flex;
-    margin: 20px;
-}
-
-
-/* Estilos para el footer */
-footer {
-    background: linear-gradient(to bottom, #ffffff, #800080); /* Fondo degradado de blanco a morado */
-    color: #800080; /* Color del texto en el footer */
-    padding: 20px 0; /* Añade algo de relleno */
-    text-align: center; /* Centra el contenido */
-}
-
-.footer-content p, .social-links a {
-    margin: 10px 0; /* Espaciado vertical para elementos dentro del footer */
-}
-
-.social-links a {
-    display: inline-block; /* Muestra los enlaces de redes sociales en línea */
-    margin: 0 10px; /* Espaciado horizontal entre íconos */
-}
-
-.social-links img {
-    width: 30px; /* Tamaño uniforme para los íconos de redes sociales */
-    height: auto; /* Mantiene la proporción de los íconos */
-}
-
-.logo img {
-    height: 100px; /* Ajusta según el tamaño de tu logo */
-    margin: 0 0 0 320px; /* Espacio alrededor del logo: arriba, derecha, abajo, izquierda */
-}
-
-.navbar {
-    list-style-type: none; /* Remueve los estilos predeterminados de lista */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Alinea los elementos de la lista horizontalmente */
-    justify-content: flex-end; /* Ajusta esta propiedad para alinear como prefieras */
-}
-
-.navbar li {
-    padding: 20px; /* Espaciado alrededor de cada elemento de la lista */
-}
-
-.navbar a {
-    text-decoration: none; /* Remueve el subrayado de los enlaces */
-    color: inherit; /* Hereda el color del elemento padre */
-}
-
-.navbar a:hover {
-    text-decoration: underline; /* Subraya el enlace cuando se posicione el mouse sobre él */
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Cambia la disposición de los elementos a vertical */
-    }
-
-    .navbar li {
-        text-align: center; /* Centra el texto en dispositivos móviles */
-    }
-    .image-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-}
-:root {
-    --primary-color: #007bff; /* Por ejemplo, un tono de azul */
-    --text-color: #333;
-}
-
-p {
-    line-height: 1.6; /* Aumenta la legibilidad del texto */
-}
-
-.container {
-    width: 80%; /* Usa un porcentaje del ancho de la ventana/viewport */
-    max-width: 1200px; /* Un máximo para no extenderse demasiado en pantallas grandes */
-    margin: auto; /* Centra el contenedor */
-}
 img {
     max-width: 100%;
     height: auto;
 }
+
+/* Cabecera */
+.site-header {
+    background-color: #fff;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.main-navigation {
+    flex: 3;
+    text-align: right;
+}
+
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #800080;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.main-navigation a:hover {
+    color: #ff69b4;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #800080;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Secciones Principales */
+
+
+/* Pie de página */
+.site-footer {
+    background: linear-gradient(to bottom, #ffffff, #800080);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p, .social-links a {
+    margin: 10px;
+    color: #fff;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 15px;
+}
+.social-links img {
+    width: 25px; /* O el tamaño que prefieras */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation a {
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .intro-section img, .gallery-section img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header, .main-navigation ul {
+        flex-direction: column;
+    }
+
+    .logo-container, .main-navigation {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        margin-bottom: 10px;
+    }
+}
+.site-logo {
+    max-width: 200px; /* Máximo ancho de 800px */
+    max-height: 200px; /* Máximo alto de 800px */
+    width: 100%; /* Esto hace que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
