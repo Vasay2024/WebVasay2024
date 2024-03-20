@@ -32,6 +32,13 @@ img {
     flex: 1;
 }
 
+.site-logo {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+}
+
 .main-navigation {
     flex: 3;
     text-align: right;
@@ -64,24 +71,24 @@ img {
 }
 
 /* Contenido Principal */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+.main-content {
+    padding: 20px;
     text-align: center;
 }
 
-.whatsapp-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    color: #007E33; /* Color verde WhatsApp */
+.image-container {
+    margin: 20px auto;
 }
 
+.centered-image .adjustable-size {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 70%; /* Incrementamos el tamaño en escritorio */
+}
+
+/* Logo de WhatsApp */
 .whatsapp-link img {
-    width: 40px; /* Tamaño del ícono de WhatsApp */
+    width: 25px;
 }
 
 /* Pie de página */
@@ -90,6 +97,7 @@ img {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
 }
 
 .footer-content p, .social-links a {
@@ -118,14 +126,19 @@ img {
     }
 
     .menu-toggle {
-        display: block;
+        display: inline-block;
+    }
+
+    .image-container, .centered-image .adjustable-size {
+        max-width: 100%;
+        width: 100%; /* Ajustamos para que ocupe todo el ancho disponible en dispositivos medianos */
     }
 }
 
 @media (max-width: 480px) {
-    .site-header, .main-navigation ul, .contact-container {
+    .site-header, .main-navigation ul, .main-content {
         flex-direction: column;
-    }
+    } 
 
     .logo-container, .main-navigation {
         text-align: center;
@@ -134,5 +147,9 @@ img {
 
     .menu-toggle {
         margin-bottom: 10px;
+    }
+
+    .image-container, .centered-image .adjustable-size {
+        width: 100%; /* La imagen ocupa todo el ancho en dispositivos muy pequeños para una mejor visualización */
     }
 }

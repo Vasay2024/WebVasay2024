@@ -9,10 +9,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     color: #333;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     min-height: 100vh;
-}
+
+} 
 
 img {
     max-width: 100%;
@@ -26,10 +27,18 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo-container {
     flex: 1;
+}
+
+.site-logo {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .main-navigation {
@@ -43,14 +52,14 @@ img {
     justify-content: flex-end;
 }
 
-.main-navigation a {
+.main-navigation a, .menu-toggle {
     text-decoration: none;
     color: #800080;
     padding: 10px;
     transition: color 0.3s;
 }
 
-.main-navigation a:hover, .main-navigation .active {
+.main-navigation a:hover, .main-navigation a.active {
     color: #ff69b4;
 }
 
@@ -65,16 +74,18 @@ img {
 
 /* Contenido Principal */
 .main-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
+    text-align: center; /* Centra el contenido textual */
 }
 
 .image-container {
-    max-width: 600px; /* Ajusta esto según el tamaño preferido */
-    margin: 20px;
-    text-align: center;
+    margin: 20px auto; /* Centra el contenedor de la imagen horizontalmente */
+    width: 50%; /* Define el ancho del contenedor de la imagen */
+}
+
+.centered-image img {
+    max-width: 50%; /* Hace que la imagen sea más pequeña y esté centrada */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
 }
 
 /* Pie de página */
@@ -83,6 +94,7 @@ img {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto; /* Empuja el pie de página al final del viewport si el contenido es corto */
 }
 
 .footer-content p, .social-links a {
@@ -97,7 +109,6 @@ img {
 
 .social-links img {
     width: 25px;
-    height: auto;
 }
 
 /* Responsividad */
@@ -114,6 +125,14 @@ img {
     .menu-toggle {
         display: inline-block;
     }
+
+    .image-container {
+        width: 70%; /* Aumenta el ancho del contenedor de la imagen para dispositivos más pequeños */
+    }
+
+    .centered-image img {
+        max-width: 70%; /* Aumenta el tamaño de la imagen para una mejor visibilidad en dispositivos más pequeños */
+    }
 }
 
 @media (max-width: 480px) {
@@ -128,5 +147,13 @@ img {
 
     .menu-toggle {
         margin-bottom: 10px;
+    }
+
+    .image-container {
+        width: 80%; /* Ajusta el ancho del contenedor de la imagen para pantallas muy pequeñas */
+    }
+
+    .centered-image img {
+        max-width: 80%; /* Ajusta el tamaño de la imagen para pantallas muy pequeñas */
     }
 }
